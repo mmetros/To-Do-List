@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Todo List</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/todos.css">
+    <!-- Jquery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="../static/lib/jquery.js">
+    </script>
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    <div id="container">
+      <h1>To-do List</h1>
+      <form action="/" method="post">
+        <input type="text" placeholder="Add New Todo">
+        <button type="submit"><i class="fa fa-plus"></i></button>
+      </form>
+      <ul>
+        {%for post in posts%}
+        <li id='{{ post[0] }}'><span><i class="fa fa-trash"></i></span>{{post[1]}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+<div id="error">
+  <h1>Invalid To-Do</h1>
+  <p>You must submit a valid value</p>
+  <button id="okay">Okay</button>
+</div>
+
+    <script type="text/javascript" type="text/javascript" src="../static/js/todos.js">
+    </script>
+  </body>
+</html>

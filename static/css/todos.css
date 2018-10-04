@@ -1,0 +1,137 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: Roboto;
+}
+
+body{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* uigradients.com */
+  background: #02AAB0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00CDAC, #02AAB0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00CDAC, #02AAB0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#container h1{
+  background-color: #2980b9;
+  color:white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+
+#container{
+  width: 360px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: 2px solid none;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 3px rgba(0,0,0, 0.1);
+
+}
+
+input {
+  font-size: 18px;
+  background-color: #f7f7f7;
+  padding: 13px 13px 13px 20px;
+  box-sizing: border-box;
+  width:75%;
+  border: 3px solid rgba(0,0,0,0)
+}
+
+input:focus{
+  background-color: white;
+  border: 3px solid #2980b9;
+  outline: none;
+}
+
+button{
+  border: none;
+  padding: 13px 13px 13px 20px;
+  font-size: 18px;
+  background: #0069ed;
+  text-align: center;
+  color: #ffffff;
+  width:25%;
+  height: 53px;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out,
+                transform 150ms ease;
+}
+#container button{
+  margin-left: -4px;
+}
+
+#container button:hover,
+#container button:focus {
+    background: #0053ba;
+}
+
+#container button:active {
+    transform: scale(0.99);
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  background-color: #fff;
+  height: 40px;
+  line-height: 40px;
+  color: #666;
+}
+/* 2n == every other 3n every third etc. */
+li:nth-child(2n){
+  background-color: #f7f7f7;
+}
+
+li:hover span{
+  width: 40px;
+  opacity: 1.0;
+}
+
+span{
+  background-color: #e74c3c;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0px;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+
+#error{
+  background-color: #F4635E;
+  position: absolute;
+  top: 110px;
+  width: 300px;
+  text-align: center;
+  color: white;
+  display: none;
+}
+
+#error h1{
+  padding: 10px;
+  letter-spacing: 1px;
+}
+
+#error p{
+  padding: 20px 10px;
+}
+
+#error button{
+  width: 100%;
+}
+
+
+.checkOff{
+  color: gray;
+  text-decoration: line-through;
+}
